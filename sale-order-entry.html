@@ -658,7 +658,7 @@
   <script>
     $('.add-more-btn').click(function() {
   var clone = $('.form-main:first').clone('');
-  
+  clone.find('input').val('');
   $(".buttonBox").before(clone);
 });
 
