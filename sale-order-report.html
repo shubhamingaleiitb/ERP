@@ -153,7 +153,7 @@
       <li class="menu-header small text-uppercase">
         <span class="menu-header-text">Sale Order</span>
       </li>
-      <li class="menu-item">
+      <li class="menu-item ">
         <a href="sale-order-entry.html" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>
           <div data-i18n="Account Settings">Sale Order Entry</div>
@@ -210,6 +210,7 @@
         
       </li>
       
+      
       <li class="menu-header small text-uppercase">
         <span class="menu-header-text">Sale Entry</span>
       </li>
@@ -229,7 +230,6 @@
         </a>
         
       </li>
-  
       
       <li class="menu-header small text-uppercase">
         <span class="menu-header-text">GRN</span>
@@ -444,104 +444,108 @@
   
 <!-- / Navbar -->
 
+
+
+
       
 
       <!-- Content wrapper -->
       <div class="content-wrapper">
 
+
+        
+
         <!-- Content -->
         
           <div class="container-xxl flex-grow-1 container-p-y">
-            
-            
 
             <div class="row">
-                <div class="col-md-6">
-                  <div class="card mb-4">
-                    <h5 class="card-header">From Date</h5>
-                    <div class="card-body">
-          <div class="col-md-10">
-            <input class="form-control" type="date" value="2022-06-18" id="html5-date-input" />
-          </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                      <h5 class="card-header">To Date</h5>
-                      <div class="card-body">
-                        <div>
+
+              <h4 class="fw-bold py-3 mb-4"> Stock Entry</h4>
+            
+              </div>
+
+              <div class="row">
+
+              
+              
+              </div>
+
+
+
+              <div class="card mb-4">
+                
+                <form class="form-main">
+                <div class="card-body form-block">
+                  <div class="table-responsive text-nowrap ">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Medicine Infromation</th>
                           
-                          <div class="col-md-10">
-                            <input class="form-control" type="date" value="2022-08-13" id="html5-date-input" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                         
+                          <th>Date of Input</th>
+                          <th>Quantity</th>
+                          <th>Batch Number</th>
+                          <th>Price</th>
+                          
+                          <th>Total</th>
+                  
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <input type="text" class="form-control" id="basic-default-name" placeholder="Medicine Name" /></td>
+                         
+                          
+                          <td> <input class="form-control" type="date" value="2022-08-13" id="html5-date-input" /></td>
+                          <td>
+                            <input type="text" class="form-control" id="basic-default-name"  />
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="basic-default-name"  />
+                          </td>
+
+                          <td>
+                            <input type="text" class="form-control" id="basic-default-name"  />
+                          </td>
+
+                          
+
+                          <td>
+                            <input type="text" class="form-control" id="basic-default-name"  />
+                          </td>
+                        </tr>
+                        
+                        
+                        
+                      </tbody>
+                    </table>
                   </div>
                 </div>
+              </form>
+              <div class="buttonBox text-center pb-3">
+              <a class="btn btn-primary add-more-btn" style="color: white;">Add</a>
+              <a class="btn btn-primary remove" style="color: white;">Remove</a>
+            </div>
+              </div>
+              <!--/ Bordered Table -->
 
+              
 
-                <div class="row">
-                    <div class="col-md-6">
-                      <div class="card mb-4">
-                        <h5 class="card-header">Store</h5>
-                        <div class="card-body">
-                          <div>
-                            
-                            <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                              <option selected>Please Select</option>
-                              <option value="1">Pharma Company</option>
-                              
-                              
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card mb-4">
-                          <h5 class="card-header">Customer Group</h5>
-                          <div class="card-body">
-                            <div>
-                              
-                              <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                                <option selected>Please Select</option>
-                                <option value="1"></option>
-                                
-                                
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-                     
-                        <div class="col-md-6">
-                          <div class="card mb-4">
-                            <h5 class="card-header">Party Search</h5>
-                            <div class="card-body">
-                              <div>
-                                
-                                <input type="text" class="form-control" id="defaultFormControlInput" placeholder=""  aria-describedby="defaultFormControlHelp" />
-                               
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        
-                    </div>
+              
+          
+               
 
 
 
-<!-- Basic Layout -->
 
 
 
           <div class="text-center">
-            <button type="button" class="btn btn-primary">Generate Report</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
           </div>
           <!-- / Content -->
 
@@ -596,6 +600,23 @@
   
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="../../../buttons.github.io/buttons.js"></script>
+
+  <script>
+    $('.add-more-btn').click(function() {
+  var clone = $('.form-main:first').clone('');
+  clone.find('input').val('');
+  $(".buttonBox").before(clone);
+});
+
+$('.remove').click(function(){
+  $('.form-main:last').remove();
+});
+  </script>
+
+
+
+
+ 
   
 </body>
 
