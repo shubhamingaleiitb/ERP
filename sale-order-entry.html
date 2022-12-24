@@ -151,7 +151,7 @@
   
      
       <li class="menu-header small text-uppercase">
-        <span class="menu-header-text">Sale Order</span>
+        <span class="menu-header-text">B2C</span>
       </li>
       <li class="menu-item active">
         <a href="sale-order-entry.html" class="menu-link ">
@@ -167,17 +167,8 @@
         </a>
         
       </li>
-  
-      <li class="menu-header small text-uppercase">
-        <span class="menu-header-text">Sale</span>
-      </li>
-      <li class="menu-item">
-        <a href="sale-entry.html" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-dock-top"></i>
-          <div data-i18n="Account Settings">Sale Entry</div>
-        </a>
-        
-      </li>
+
+
       <li class="menu-item">
         <a href="sale-invoice-list.html" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
@@ -185,35 +176,7 @@
         </a>
         
       </li>
-  
-      <li class="menu-item">
-        <a href="pend-genret.html" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-dock-top"></i>
-          <div data-i18n="Account Settings">Pend genret sale inv</div>
-        </a>
-        
-      </li>
-  
-      <li class="menu-item">
-        <a href="b2c-retailer-sale-entry.html" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-dock-top"></i>
-          <div data-i18n="Account Settings">B2C (Retailer) sale entry</div>
-        </a>
-        
-      </li>
-  
-      <li class="menu-item">
-        <a href="b2c-wholeseller-sale-entry.html" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-dock-top"></i>
-          <div data-i18n="Account Settings">B2C (Wholeseller) sale entry</div>
-        </a>
-        
-      </li>
-      
-      
-      <li class="menu-header small text-uppercase">
-        <span class="menu-header-text">Sale Entry</span>
-      </li>
+
       <li class="menu-item">
         <a href="sale-return-entry.html" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>
@@ -230,6 +193,32 @@
         </a>
         
       </li>
+  
+      <li class="menu-header small text-uppercase">
+        <span class="menu-header-text">Sale</span>
+      </li>
+      <li class="menu-item">
+        <a href="sale-entry.html" class="menu-link ">
+          <i class="menu-icon tf-icons bx bx-dock-top"></i>
+          <div data-i18n="Account Settings">Sale Entry</div>
+        </a>
+        
+      </li>
+     
+  
+     
+  
+      <li class="menu-item">
+        <a href="b2c-wholeseller-sale-entry.html" class="menu-link ">
+          <i class="menu-icon tf-icons bx bx-dock-top"></i>
+          <div data-i18n="Account Settings">B2C (Wholeseller) sale entry</div>
+        </a>
+        
+      </li>
+      
+      
+      
+      
       
       <li class="menu-header small text-uppercase">
         <span class="menu-header-text">GRN</span>
@@ -525,14 +514,16 @@
                     <table class="table table-bordered">
                       <thead>
                         <tr>
-                          <th>Medicine Infromation</th>
+                          <th>Medicine Name</th>
+                          <th>HSN Code</th>
                           <th>Batch</th>
-                          <th>Available Quantity</th>
+                          <th>manufacturing Date</th>
                           <th>Expiry Date</th>
                           <th>Quantity</th>
-                          <th>Box Quantity</th>
+                          
                           <th>Price</th>
                           <th>Discount%</th>
+                          <th>GST</th>
                           <th>Total</th>
                   
                           
@@ -542,6 +533,9 @@
                         <tr>
                           <td> <input type="text" class="form-control" id="basic-default-name" placeholder="Medicine Name" /></td>
                           <td>
+                            <input type="text" class="form-control" id="basic-default-name"  />
+                          </td>
+                          <td>
                             <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
                             <option selected>Please Select</option>
                             <option value="1">3</option>
@@ -549,20 +543,21 @@
                           </select>
                         </td>
                           <td>
-                            <input type="text" class="form-control" id="basic-default-name"  />
+                            <input class="form-control" type="date"  id="html5-date-input" />
                           </td>
-                          <td> <input class="form-control" type="date" value="2022-08-13" id="html5-date-input" /></td>
+                          <td> <input class="form-control" type="date"  id="html5-date-input" /></td>
                           <td>
                             <input type="text" class="form-control" id="basic-default-name"  />
                           </td>
-                          <td>
-                            <input type="text" class="form-control" id="basic-default-name"  />
-                          </td>
+                          
 
                           <td>
                             <input type="text" class="form-control" id="basic-default-name"  />
                           </td>
 
+                          <td>
+                            <input type="text" class="form-control" id="basic-default-name"  />
+                          </td>
                           <td>
                             <input type="text" class="form-control" id="basic-default-name"  />
                           </td>
@@ -591,21 +586,69 @@
               
           
                
+          
+              <div class="card mb-4">
+                
+                <form >
+                <div class="card-body ">
+                  <div class="table-responsive text-nowrap ">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Total Discount</th>
+                          <th>Total GST</th>
+                          <th>Grand Total</th>
+                          <th>Paid Amount</th>
+                          <th>Due Amount</th>
+                          
+                          <th>Change</th>
+                          
+                  
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <input type="text" class="form-control" id="basic-default-name"  /></td>
+                          <td>
+                            <input type="text" class="form-control" id="basic-default-name"  />
+                        </td>
+                          <td>
+                            <input type="text" class="form-control" id="basic-default-name"  />
+                          </td>
+                          <td> <input type="text" class="form-control" id="basic-default-name"  /></td>
+                          <td>
+                            <input type="text" class="form-control" id="basic-default-name"  disabled/>
+                          </td>
+                          
+
+                          <td>
+                            <input type="text" class="form-control" id="basic-default-name"  disabled/>
+                          </td>
+
+                          
+                        </tr>
+                        
+                        
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </form>
 
 
 
 
-
-
-          <div class="text-center">
-            <button type="button" class="btn btn-primary">Submit</button>
-          </div>
+          
           </div>
           <!-- / Content -->
 
           
           
-
+          <div class="text-center">
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
 
 
           

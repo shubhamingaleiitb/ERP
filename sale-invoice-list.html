@@ -151,7 +151,7 @@
   
      
       <li class="menu-header small text-uppercase">
-        <span class="menu-header-text">Sale Order</span>
+        <span class="menu-header-text">B2C</span>
       </li>
       <li class="menu-item">
         <a href="sale-order-entry.html" class="menu-link ">
@@ -167,17 +167,7 @@
         </a>
         
       </li>
-  
-      <li class="menu-header small text-uppercase">
-        <span class="menu-header-text">Sale</span>
-      </li>
-      <li class="menu-item">
-        <a href="sale-entry.html" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-dock-top"></i>
-          <div data-i18n="Account Settings">Sale Entry</div>
-        </a>
-        
-      </li>
+
       <li class="menu-item active">
         <a href="sale-invoice-list.html" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
@@ -185,34 +175,7 @@
         </a>
         
       </li>
-  
-      <li class="menu-item">
-        <a href="pend-genret.html" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-dock-top"></i>
-          <div data-i18n="Account Settings">Pend genret sale inv</div>
-        </a>
-        
-      </li>
-  
-      <li class="menu-item">
-        <a href="b2c-retailer-sale-entry.html" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-dock-top"></i>
-          <div data-i18n="Account Settings">B2C (Retailer) sale entry</div>
-        </a>
-        
-      </li>
-  
-      <li class="menu-item">
-        <a href="b2c-wholeseller-sale-entry.html" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-dock-top"></i>
-          <div data-i18n="Account Settings">B2C (Wholeseller) sale entry</div>
-        </a>
-        
-      </li>
-      
-      <li class="menu-header small text-uppercase">
-        <span class="menu-header-text">Sale Entry</span>
-      </li>
+
       <li class="menu-item">
         <a href="sale-return-entry.html" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>
@@ -229,6 +192,31 @@
         </a>
         
       </li>
+  
+      <li class="menu-header small text-uppercase">
+        <span class="menu-header-text">Sale</span>
+      </li>
+      <li class="menu-item">
+        <a href="sale-entry.html" class="menu-link ">
+          <i class="menu-icon tf-icons bx bx-dock-top"></i>
+          <div data-i18n="Account Settings">Sale Entry</div>
+        </a>
+        
+      </li>
+     
+  
+     
+  
+      <li class="menu-item">
+        <a href="b2c-wholeseller-sale-entry.html" class="menu-link ">
+          <i class="menu-icon tf-icons bx bx-dock-top"></i>
+          <div data-i18n="Account Settings">B2C (Wholeseller) sale entry</div>
+        </a>
+        
+      </li>
+      
+      
+      
   
       
       <li class="menu-header small text-uppercase">
@@ -456,12 +444,70 @@
             
 
             <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-4">
+                  <h5 class="card-header">Monthly</h5>
+                  <div class="card-body">
+        <div class="col-md-10">
+          <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+            <option selected>Please Select</option>
+            <option value="1">January</option>
+            <option value="1">February</option>
+            
+          </select>
+        </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="card mb-4">
+                    <h5 class="card-header">Quarterly</h5>
+                    <div class="card-body">
+                      <div>
+                        
+                        <div class="col-md-10">
+                          <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                            <option selected>Please Select</option>
+                            <option value="1"></option>
+                            <option value="1"></option>
+                            
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card mb-4">
+                      <h5 class="card-header">Yearly</h5>
+                      <div class="card-body">
+            <div class="col-md-10">
+              <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                <option selected>Please Select</option>
+                <option value="1">2022</option>
+                <option value="1">2023</option>
+                
+              </select>
+            </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              </div>
+
+              <h4 class="fw-bold py-3 mb-4"> For custom dates choose from below</h4>
+
+            <div class="row">
                 <div class="col-md-6">
                   <div class="card mb-4">
                     <h5 class="card-header">From Date</h5>
                     <div class="card-body">
           <div class="col-md-10">
-            <input class="form-control" type="date" value="2022-06-18" id="html5-date-input" />
+            <input class="form-control" type="date"  id="html5-date-input" />
           </div>
                     </div>
                   </div>
@@ -473,7 +519,7 @@
                         <div>
                           
                           <div class="col-md-10">
-                            <input class="form-control" type="date" value="2022-08-13" id="html5-date-input" />
+                            <input class="form-control" type="date" id="html5-date-input" />
                           </div>
                         </div>
                       </div>
@@ -482,55 +528,14 @@
                 </div>
 
 
-                <div class="row">
-                    <div class="col-md-6">
-                      <div class="card mb-4">
-                        <h5 class="card-header">Store</h5>
-                        <div class="card-body">
-                          <div>
-                            
-                            <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                              <option selected>Please Select</option>
-                              <option value="1">Pharma Company</option>
-                              
-                              
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card mb-4">
-                          <h5 class="card-header">Customer Group</h5>
-                          <div class="card-body">
-                            <div>
-                              
-                              <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                                <option selected>Please Select</option>
-                                <option value="1"></option>
-                                
-                                
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-                      
-                        <div class="col-md-6">
-                          <div class="card mb-4">
-                            <h5 class="card-header">Party Search</h5>
-                            <div class="card-body">
-                              <div>
-                                
-                                <input type="text" class="form-control" id="defaultFormControlInput" placeholder=""  aria-describedby="defaultFormControlHelp" />
-                               
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                
+                    
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary">Generate Report</button>
+                </div>
+  
                         
+                  </div>      
                     </div>
 
 
@@ -539,9 +544,7 @@
 
 
 
-          <div class="text-center">
-            <button type="button" class="btn btn-primary">Generate Report</button>
-          </div>
+          
           <!-- / Content -->
 
           
