@@ -40,7 +40,9 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     
-    
+    <!--Invoice 
+    -->
+    <script src="https://unpkg.com/easyinvoice/dist/easyinvoice.min.js"></script>
 
     <!-- Page CSS -->
     
@@ -177,7 +179,7 @@
         
       </li>
 
-      <li class="menu-item active">
+      <li class="menu-item  active">
         <a href="sale-return-entry.html" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>
           <div data-i18n="Account Settings">Sale Return Entry</div>
@@ -204,7 +206,7 @@
         </a>
         
       </li>
-      
+     
   
      
   
@@ -217,7 +219,7 @@
       </li>
       
       
-     
+      
       
       
       <li class="menu-header small text-uppercase">
@@ -492,7 +494,7 @@
               </div>
               <div class="col-md-6">
                   <div class="card mb-4">
-                    <h5 class="card-header">Reference</h5>
+                    <h5 class="card-header">Phone Number</h5>
                     <div class="card-body">
                       <div>
                         
@@ -504,6 +506,10 @@
                 </div>
               </div>
 
+              <div class="text-center mb-4">
+                <button type="button" class="btn btn-primary">Search</button>
+              </div>
+
 
 
               <div class="card mb-4">
@@ -511,10 +517,24 @@
                 <form class="form-main">
                 <div class="card-body form-block">
                   <div class="table-responsive text-nowrap ">
+
+                    <div class="col-md-12">
+                      <div class="card mb-4">
+                        <h5 class="card-header">Medicine Name</h5>
+                        <div class="card-body">
+                          <div>
+                            
+                            <input type="text" class="form-control" id="defaultFormControlInput"  aria-describedby="defaultFormControlHelp" />
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
                     <table class="table table-bordered">
                       <thead>
                         <tr>
-                          <th>Medicine Name</th>
+                         
                           <th>HSN Code</th>
                           <th>Batch</th>
                           <th>manufacturing Date</th>
@@ -531,7 +551,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td> <input type="text" class="form-control" id="basic-default-name" placeholder="Medicine Name" /></td>
+                         
                           <td>
                             <input type="text" class="form-control" id="basic-default-name"  />
                           </td>
@@ -545,7 +565,7 @@
                           <td>
                             <input class="form-control" type="date"  id="html5-date-input" />
                           </td>
-                          <td> <input class="form-control" type="date"  id="html5-date-input" /></td>
+                          <td> <input class="form-control" type="date"  id="txtDate" /></td>
                           <td>
                             <input type="text" class="form-control" id="basic-default-name"  />
                           </td>
@@ -569,15 +589,14 @@
                         
                         
                         
+                        
                       </tbody>
+                      
                     </table>
                   </div>
                 </div>
               </form>
-              <div class="buttonBox text-center pb-3">
-              <a class="btn btn-primary add-more-btn" style="color: white;">Add</a>
-              <a class="btn btn-primary remove" style="color: white;">Remove</a>
-            </div>
+             
               </div>
               <!--/ Bordered Table -->
 
@@ -587,55 +606,65 @@
           
                
           
-              <div class="card mb-4">
+             
                 
-                <form >
-                <div class="card-body ">
-                  <div class="table-responsive text-nowrap ">
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>Total Discount</th>
-                          <th>Total GST</th>
-                          <th>Grand Total</th>
-                          <th>Paid Amount</th>
-                          <th>Due Amount</th>
-                          
-                          <th>Change</th>
-                          
-                  
-                          
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td> <input type="text" class="form-control" id="basic-default-name"  /></td>
-                          <td>
-                            <input type="text" class="form-control" id="basic-default-name"  />
-                        </td>
-                          <td>
-                            <input type="text" class="form-control" id="basic-default-name"  />
-                          </td>
-                          <td> <input type="text" class="form-control" id="basic-default-name"  /></td>
-                          <td>
-                            <input type="text" class="form-control" id="basic-default-name"  disabled/>
-                          </td>
-                          
+                
+              <div class="row">
+                <h4 class="fw-bold py-3 mb-4">Order Summary</h4>
 
-                          <td>
-                            <input type="text" class="form-control" id="basic-default-name"  disabled/>
-                          </td>
-
-                          
-                        </tr>
+                <div class="col-md-3">
+                  <div class="card mb-4">
+                    <h5 class="card-header">Total Discount</h5>
+                    <div class="card-body">
+                      <div>
                         
-                        
-                        
-                      </tbody>
-                    </table>
+                        <input type="text" class="form-control" id="defaultFormControlInput"  aria-describedby="defaultFormControlHelp" />
+                       
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </form>
+                <div class="col-md-3">
+                    <div class="card mb-4">
+                      <h5 class="card-header">Total GST</h5>
+                      <div class="card-body">
+                        <div>
+                          
+                          <input type="text" class="form-control" id="defaultFormControlInput"  aria-describedby="defaultFormControlHelp" />
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+    
+                 
+    
+                  <div class="col-md-3">
+                    <div class="card mb-4">
+                      <h5 class="card-header">Grand Total</h5>
+                      <div class="card-body">
+                        <div>
+                          
+                          <input type="text" class="form-control" id="defaultFormControlInput"  aria-describedby="defaultFormControlHelp" />
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="card mb-4">
+                        <h5 class="card-header">Paid Amount</h5>
+                        <div class="card-body">
+                          <div>
+                            
+                            <input type="text" class="form-control" id="defaultFormControlInput"  aria-describedby="defaultFormControlHelp" />
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
 
 
 
@@ -647,7 +676,7 @@
           
           
           <div class="text-center">
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" onclick="downloadInvoice()">Submit</button>
           </div>
 
 
@@ -707,6 +736,134 @@
 
 $('.remove').click(function(){
   $('.form-main:last').remove();
+});
+  </script>
+
+  <script>
+    function downloadInvoice(){
+      var data = {
+    // Customize enables you to provide your own templates
+    // Please review the documentation for instructions and examples
+    "customize": {
+        //  "template": fs.readFileSync('template.html', 'base64') // Must be base64 encoded html 
+    },
+    "images": {
+        // The logo on top of your invoice
+        "logo": "https://public.easyinvoice.cloud/img/logo_en_original.png",
+        // The invoice background
+       
+    },
+    // Your own data
+    "sender": {
+        "company": "Sample Corp",
+        "address": "Sample Street 123",
+        "zip": "1234 AB",
+        "city": "Sampletown",
+        "country": "Samplecountry"
+        //"custom1": "custom value 1",
+        //"custom2": "custom value 2",
+        //"custom3": "custom value 3"
+    },
+    // Your recipient
+    "client": {
+        "company": "Client Corp",
+        "address": "Clientstreet 456",
+        "zip": "4567 CD",
+        "city": "Clientcity",
+        "country": "Clientcountry"
+        // "custom1": "custom value 1",
+        // "custom2": "custom value 2",
+        // "custom3": "custom value 3"
+    },
+    "information": {
+        // Invoice number
+        "number": "2021.0001",
+        // Invoice data
+        "date": "12-12-2021",
+        // Invoice due date
+        "due-date": "31-12-2021"
+    },
+    // The products you would like to see on your invoice
+    // Total values are being calculated automatically
+    "products": [
+        {
+            "quantity": 2,
+            "description": "Product 1",
+            "tax-rate": 6,
+            "price": 33.87
+        },
+        {
+            "quantity": 4.1,
+            "description": "Product 2",
+            "tax-rate": 6,
+            "price": 12.34
+        },
+        {
+            "quantity": 4.5678,
+            "description": "Product 3",
+            "tax-rate": 21,
+            "price": 6324.453456
+        }
+    ],
+    // The message you would like to display on the bottom of your invoice
+    "bottom-notice": "Kindly pay your invoice within 15 days.",
+    // Settings to customize your invoice
+    "settings": {
+        "currency": "USD", // See documentation 'Locales and Currency' for more info. Leave empty for no currency.
+        // "locale": "nl-NL", // Defaults to en-US, used for number formatting (See documentation 'Locales and Currency')
+        // "tax-notation": "gst", // Defaults to 'vat'
+        // "margin-top": 25, // Defaults to '25'
+        // "margin-right": 25, // Defaults to '25'
+        // "margin-left": 25, // Defaults to '25'
+        // "margin-bottom": 25, // Defaults to '25'
+        // "format": "A4", // Defaults to A4, options: A3, A4, A5, Legal, Letter, Tabloid
+        // "height": "1000px", // allowed units: mm, cm, in, px
+        // "width": "500px", // allowed units: mm, cm, in, px
+        // "orientation": "landscape", // portrait or landscape, defaults to portrait
+    },
+    // Translate your invoice to your preferred language
+    "translate": {
+        // "invoice": "FACTUUR",  // Default to 'INVOICE'
+        // "number": "Nummer", // Defaults to 'Number'
+        // "date": "Datum", // Default to 'Date'
+        // "due-date": "Verloopdatum", // Defaults to 'Due Date'
+        // "subtotal": "Subtotaal", // Defaults to 'Subtotal'
+        // "products": "Producten", // Defaults to 'Products'
+        // "quantity": "Aantal", // Default to 'Quantity'
+        // "price": "Prijs", // Defaults to 'Price'
+        // "product-total": "Totaal", // Defaults to 'Total'
+        // "total": "Totaal" // Defaults to 'Total'
+    },
+};
+
+//Create your invoice! Easy!
+easyinvoice.createInvoice(data, function (result) {
+    //The response will contain a base64 encoded PDF file
+    console.log('PDF base64 string: ', result.pdf);
+    easyinvoice.download("invoice.pdf")
+});
+    }
+  </script>
+
+  <script>
+    $(function(){
+    var dtToday = new Date();
+    
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+    var maxDate = year + '-' + month + '-' + day;
+
+    // or instead:
+    // var maxDate = dtToday.toISOString().substr(0, 10);
+
+    
+    $('#txtDate').attr('min', maxDate);
 });
   </script>
 

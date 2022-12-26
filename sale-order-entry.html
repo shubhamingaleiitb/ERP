@@ -504,6 +504,18 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-md-6">
+                  <div class="card mb-4">
+                    <h5 class="card-header">Phone Number</h5>
+                    <div class="card-body">
+                      <div>
+                        
+                        <input type="text" class="form-control" id="defaultFormControlInput"  aria-describedby="defaultFormControlHelp" />
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
 
@@ -513,10 +525,24 @@
                 <form class="form-main">
                 <div class="card-body form-block">
                   <div class="table-responsive text-nowrap ">
+
+                    <div class="col-md-12">
+                      <div class="card mb-4">
+                        <h5 class="card-header">Medicine Name</h5>
+                        <div class="card-body">
+                          <div>
+                            
+                            <input type="text" class="form-control" id="defaultFormControlInput"  aria-describedby="defaultFormControlHelp" />
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
                     <table class="table table-bordered">
                       <thead>
                         <tr>
-                          <th>Medicine Name</th>
+                         
                           <th>HSN Code</th>
                           <th>Batch</th>
                           <th>manufacturing Date</th>
@@ -533,7 +559,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td> <input type="text" class="form-control" id="basic-default-name" placeholder="Medicine Name" /></td>
+                         
                           <td>
                             <input type="text" class="form-control" id="basic-default-name"  />
                           </td>
@@ -547,7 +573,7 @@
                           <td>
                             <input class="form-control" type="date"  id="html5-date-input" />
                           </td>
-                          <td> <input class="form-control" type="date"  id="html5-date-input" /></td>
+                          <td> <input class="form-control" type="date"  id="txtDate" /></td>
                           <td>
                             <input type="text" class="form-control" id="basic-default-name"  />
                           </td>
@@ -571,7 +597,9 @@
                         
                         
                         
+                        
                       </tbody>
+                      
                     </table>
                   </div>
                 </div>
@@ -595,7 +623,7 @@
               <div class="row">
                 <h4 class="fw-bold py-3 mb-4">Order Summary</h4>
 
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <div class="card mb-4">
                     <h5 class="card-header">Total Discount</h5>
                     <div class="card-body">
@@ -607,7 +635,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <div class="card mb-4">
                       <h5 class="card-header">Total GST</h5>
                       <div class="card-body">
@@ -619,11 +647,11 @@
                       </div>
                     </div>
                   </div>
-                  </div>
+                  
     
-                  <div class="row">
+                 
     
-                  <div class="col-md-6">
+                  <div class="col-md-3">
                     <div class="card mb-4">
                       <h5 class="card-header">Grand Total</h5>
                       <div class="card-body">
@@ -635,7 +663,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-3">
                       <div class="card mb-4">
                         <h5 class="card-header">Paid Amount</h5>
                         <div class="card-body">
@@ -647,7 +675,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  
 
 
 
@@ -826,6 +854,28 @@ easyinvoice.createInvoice(data, function (result) {
     easyinvoice.download("invoice.pdf")
 });
     }
+  </script>
+
+  <script>
+    $(function(){
+    var dtToday = new Date();
+    
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+    var maxDate = year + '-' + month + '-' + day;
+
+    // or instead:
+    // var maxDate = dtToday.toISOString().substr(0, 10);
+
+    
+    $('#txtDate').attr('min', maxDate);
+});
   </script>
 
 
