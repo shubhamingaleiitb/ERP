@@ -74,6 +74,10 @@
 
 <body>
 
+
+
+ 
+
   <!-- Layout wrapper -->
 <div class="layout-wrapper layout-content-navbar  ">
   <div class="layout-container">
@@ -155,7 +159,7 @@
       <li class="menu-header small text-uppercase">
         <span class="menu-header-text">B2C</span>
       </li>
-      <li class="menu-item">
+      <li class="menu-item ">
         <a href="sale-order-entry.html" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>
           <div data-i18n="Account Settings">Sale Order Entry</div>
@@ -179,7 +183,7 @@
         
       </li>
 
-      <li class="menu-item  active">
+      <li class="menu-item active">
         <a href="sale-return-entry.html" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>
           <div data-i18n="Account Settings">Sale Return Entry</div>
@@ -492,7 +496,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              
+                <div class="col-md-6">
                   <div class="card mb-4">
                     <h5 class="card-header">Phone Number</h5>
                     <div class="card-body">
@@ -505,10 +510,10 @@
                   </div>
                 </div>
               </div>
-
               <div class="text-center mb-4">
-                <button type="button" class="btn btn-primary">Search</button>
+                <button type="button" class="btn btn-primary" >Search</button>
               </div>
+    
 
 
 
@@ -518,23 +523,12 @@
                 <div class="card-body form-block">
                   <div class="table-responsive text-nowrap ">
 
-                    <div class="col-md-12">
-                      <div class="card mb-4">
-                        <h5 class="card-header">Medicine Name</h5>
-                        <div class="card-body">
-                          <div>
-                            
-                            <input type="text" class="form-control" id="defaultFormControlInput"  aria-describedby="defaultFormControlHelp" />
-                           
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                   
                     
                     <table class="table table-bordered">
                       <thead>
                         <tr>
-                         
+                         <th>Medicine Name</th>
                           <th>HSN Code</th>
                           <th>Batch</th>
                           <th>manufacturing Date</th>
@@ -551,9 +545,13 @@
                       </thead>
                       <tbody>
                         <tr>
+
+                          <td>
+                            <textarea  class=" form-control" ></textarea>
+                          </td>
                          
                           <td>
-                            <input type="text" class="form-control" id="basic-default-name"  />
+                            <textarea  class=" form-control" ></textarea>
                           </td>
                           <td>
                             <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
@@ -567,23 +565,23 @@
                           </td>
                           <td> <input class="form-control" type="date"  id="txtDate" /></td>
                           <td>
-                            <input type="text" class="form-control" id="basic-default-name"  />
+                            <textarea  class=" form-control" ></textarea>
                           </td>
                           
 
                           <td>
-                            <input type="text" class="form-control" id="basic-default-name"  />
+                            <textarea  class=" form-control" ></textarea>
                           </td>
 
                           <td>
-                            <input type="text" class="form-control" id="basic-default-name"  />
+                            <textarea  class=" form-control" ></textarea>
                           </td>
                           <td>
-                            <input type="text" class="form-control" id="basic-default-name"  />
+                            <textarea  class=" form-control" ></textarea>
                           </td>
 
                           <td>
-                            <input type="text" class="form-control" id="basic-default-name"  />
+                            <textarea  class=" form-control" ></textarea>
                           </td>
                         </tr>
                         
@@ -596,7 +594,7 @@
                   </div>
                 </div>
               </form>
-             
+              
               </div>
               <!--/ Bordered Table -->
 
